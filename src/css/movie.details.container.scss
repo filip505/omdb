@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+  .card {
+    width: 100%;
+    max-width: 530px;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .title {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: row;
+
+    .poster {
+      width: 12rem;
+    }
+
+    .info {
+      padding: 0.5rem;
+
+      .ratings {
+        padding: 0.5rem
+      }
+
+    }
+
+  }
+
+}
+
+// @media only screen and (max-width: 600px) {
+  //   .details {
+  //     flex-direction: column;
+  //     align-items: center;
+  //   }
+
+  //   .info {
+  //     padding-top: 1rem
+  //   }
+  // }

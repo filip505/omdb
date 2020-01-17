@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { createLoadingSelector, createErrorMessageSelector } from '../reducer/selectors';
 import MovieItemComponent from '../component/Movie.item.component';
-import css from '../css/list.container.css'
+import css from '../css/list.container.scss'
 import queryString from 'query-string'
 import { fetchData } from '../action/omdb'
 
@@ -38,14 +38,14 @@ class ListContainer extends Component {
       <div className={css.navigationContainer}>
         {page > 0 &&
           <button
-            className={[css.button, css.buttonLeft].join(' ')}
+            className={css.buttonLeft}
             onClick={() => this.redirect(parseInt(page) - 1)}
           >
             Previous
           </button>
         }
         <button
-          className={[css.button, css.buttonRight].join(' ')}
+          className={css.buttonRight}
           onClick={() => this.redirect(parseInt(page) + 1)}
         >
           Next

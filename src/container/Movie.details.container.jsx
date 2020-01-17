@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { fetchDetails } from '../action/omdb'
-import css from '../css/movie.details.container.css'
+import css from '../css/movie.details.container.scss'
 import RatingItemComponent from '../component/Rating.item.component'
 
 class MovieDetailsContainer extends Component {

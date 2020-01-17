@@ -1,4 +1,5 @@
-# OMDB API ASSIGMENT
+# OMDB API REACT ASSIGMENT
+Assigment: [link](https://www.dropbox.com/s/yuw178481e0tbs2/Frontend%20%28ReactJS%29.pdf?dl=0)
 
 ### Run
 - Clone it

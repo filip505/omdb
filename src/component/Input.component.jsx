@@ -1,5 +1,5 @@
 import React from 'react'
-import css from '../css/input.component.css'
+import css from '../css/input.component.scss'
 
 function inputComponent({ error, value, className, onChange, placeholder }) {
   return (

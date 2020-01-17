@@ -1,5 +1,5 @@
 import React from 'react'
-import css from '../css/movie.item.component.css'
+import css from '../css/movie.item.component.scss'
 
 
 function MovieItemComponent({ movie, className, onClick }) {

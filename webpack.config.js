@@ -5,8 +5,8 @@ module.exports = {
         'webpack-dev-server/client?http://0.0.0.0:80',
         'babel-polyfill',
         './src/App.jsx'
-       
-      
+
+
     ],
     resolve: {
         extensions: ['.jsx', '.js', '.json']
@@ -34,7 +34,7 @@ module.exports = {
                         loader: "html-loader"
                     }
                 ]
-            }, 
+            },
             {
                 test: /\.css$/,
                 use: [
@@ -47,6 +47,23 @@ module.exports = {
                             modules: true,
                         }
                     }
+                ],
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    {
+                        loader: 'style-loader',
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                    },
                 ],
             }
         ]

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import css from '../css/header.container.css'
+import css from '../css/header.container.scss'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import InputComponent from '../component/input.component';
 import Joi from '@hapi/joi'
@@ -72,29 +72,33 @@ class HeaderContainer extends Component {
   }
 
   render() {
+    console.log('kkdkdkdkd', this.props.location)
     return (
       <div className={css.container}>
-        {this.props.location.pathname != '/movie' && this.renderBackButton()}
-        <form onSubmit={this.handleSubmit.bind(this)} className={css.form}>
-          <InputComponent
-            className={[css.input, css.inputLeft].join(' ')}
-            placeholder='title'
-            onChange={({ target }) => this.setState({ title: target.value })}
-            error={this.state.error.title}
-            value={this.state.title}
-          />
-          <select className={css.select} id='select' ref='select'>
-            {this.types.map(type => <option key={type.name} value={type.value}>{type.name}</option>)}
-          </select>
-          <InputComponent
-             className={[css.input, css.inputRight].join(' ')}
-            placeholder='year'
-            onChange={({ target }) => this.setState({ year: target.value })}
-            error={this.state.error.year}
-            value={this.state.year}
-          />
-          <button className={css.button}>Search</button>
-        </form>
+        <div className={css.item}>
+          {this.props.location.pathname.startsWith('/movie') && this.renderBackButton()}
+          <form className={css.form} onSubmit={this.handleSubmit.bind(this)} className={css.form}>
+            <InputComponent
+              className={css.inputTitle}
+              placeholder='title'
+              onChange={({ target }) => this.setState({ title: target.value })}
+              error={this.state.error.title}
+              value={this.state.title}
+            />
+            <select className={css.select} id='select' ref='select'>
+              {this.types.map(type => <option key={type.name} value={type.value}>{type.name}</option>)}
+            </select>
+            <InputComponent
+              className={css.inputYear}
+              placeholder='year'
+              onChange={({ target }) => this.setState({ year: target.value })}
+              error={this.state.error.year}
+              value={this.state.year}
+            />
+
+            <button className={css.button}>Search</button>
+          </form>
+        </div>
       </div>
     )
   }

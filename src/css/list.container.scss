@@ -1,3 +1,15 @@
+@import './variables.module.scss';
+
+%button {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  background-color: var(--color-primary);
+  border-width: 0px;
+  color: white;
+  font-size: 16px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -33,22 +45,15 @@
   max-width: 900px;
 }
 
-.button {
-  width: 50%;
-  height: 100%;
-  text-align: center;
-  background-color: #E9B664;
-  border-width: 0px;
-  color: white;
-  font-size: 16px;
-}
 
 .buttonRight {
+  @extend %button;
   margin-left: 1px;
   border-radius: 0px 4px 4px 0px;
 }
 
 .buttonLeft {
+  @extend %button;
   margin-right: 1px;
   border-radius: 4px 0px 0px 4px;
 }
