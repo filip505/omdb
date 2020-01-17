@@ -1,5 +1,5 @@
 # OMDB API REACT ASSIGMENT
-Assigment: [](task.pdf)
+Assigment: ![](task.pdf)
 
 ![](video.gif)
 
