@@ -30,7 +30,7 @@
     "@material-ui/icons": "^4.4.3",
     "axios": "^0.19.0",
     "loadsh": "0.0.4",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "query-string": "^6.8.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
